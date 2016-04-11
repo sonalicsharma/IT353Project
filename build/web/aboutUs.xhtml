@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>About Us</title>
+
+        <!-- Bootstrap -->
+        <link href="resources/css/bootstrap.css" rel="stylesheet"></link>
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet"></link>
+        <link href="resources/css/style1.css" rel="stylesheet"></link>
+
+    </h:head>
+    <h:body>
+        <body background="resources/images/ISU.gif" class="img-responsive" />
+
+        <!-- navigational Bar -->
+        <div class="container-fluid">
+            <div class="container">
+
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <h:form>
+                                <img src="resources/images/cutmypic.jpg" alt="chidiya" width="50px" height="50px" align="left" class="img-rounded" style="margin-right: 20px" />
+                                <h:commandLink class="navbar-brand" action="index?faces-redirect=true">Repository Project</h:commandLink>
+                            </h:form>
+                        </div>
+                        <h:form>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li> <h:commandLink  action="signUp?faces-redirect=true" value="Sign Up" /></li>
+                                    <li><h:commandLink action="login?faces-redirect=true" value="Login" /></li>
+                                    <li> 
+                                        <div class="navbar-form navbar-left" >
+                                            <div class="input-group">
+
+                                                <h:inputText class="form-control"  value="#{searchController.searchKeyword}" />
+                                                <div class="input-group-btn">
+
+                                                    <h:commandLink type="button" class="btn btn-primary" action="demoSearch1.xhtml">
+                                                        Search
+                                                    </h:commandLink>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </h:form>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+        <!-- Navigational bar close-->
+        <br/><br/><br/>
+        <h:form>
+            <!--<p:growl id="msgs" showDetail="true" />-->
+
+            <p:fieldset legend="About Us" style="margin-bottom:20px">
+                <h:panelGrid columns="2" cellpadding="5">
+                    <p:graphicImage url="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/090/1d0/2c0f7df.jpg" style="width: 200px; height: 200px;" />
+                    <h:outputText
+                        value="I am Achal Mahajan currently pursuing Masters in Web Application and Development at 
+                        Illinois State University, Normal ,IL- USA. This Project was part of my Graduate Curriculum.
+                        You can view my LinkedIn profile for more details.">
+                    </h:outputText>
+                    <a href="https://www.linkedin.com/profile/preview?locale=en_US&amp;trk=prof-0-sb-preview-primary-button"> 
+                        <img src="resources/images/in.png" alt=""/> </a>
+                </h:panelGrid>
+                <br/>
+
+
+                <h:panelGrid columns="2" cellpadding="5">
+                    <p:graphicImage url="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAGGAAAAJGUxZGJjYjU5LWQwOWYtNGQzYS04YjhiLWViYjgwMzJmMDU3ZQ.jpg" style="width: 200px; height: 200px;" />
+                    <h:outputText
+                        value="I am Ankit Chainani currently pursuing Masters in Web Application and Development at 
+                        Illinois State University, Normal ,IL- USA. This Project was part of my Graduate Curriculum.
+                        You can view my LinkedIn profile for more details." />
+                    <a href="https://www.linkedin.com/in/ankitchainani"> 
+                        <img src="resources/images/in.png" alt=""/> </a>
+                </h:panelGrid>
+
+
+                <h:panelGrid columns="2" cellpadding="5">
+                    <p:graphicImage url="https://lh3.googleusercontent.com/-Fr9k11GICsI/AAAAAAAAAAI/AAAAAAAAAAA/iN7rGlkm68M/photo.jpg" style="width: 200px; height: 200px;" />
+                    <h:outputText
+                        value="I am Sonali Sharma currently pursuing Masters in Web Application and Development at 
+                        Illinois State University, Normal ,IL- USA. This Project was part of my Graduate Curriculum.
+                        You can view my LinkedIn profile for more details." />
+                    <a href="https://www.linkedin.com/profile/view?id=188714797&amp;authType=NAME_SEARCH&amp;authToken=f5TE&amp;locale=en_US&amp;trk=tyah&amp;trkInfo=clickedVertical%3Amynetwork%2Cidx%3A1-2-2%2CtarId%3A1430293589548%2Ctas%3Asonali+ch"> 
+                        <img src="resources/images/in.png" alt=""/> </a>
+                </h:panelGrid>
+            </p:fieldset>
+
+        </h:form>
+
+        <!--footer start--> 
+        <div style ="position:fixed; bottom:0; width:100%;height:45px; background:black">   
+            <p align="center"> <h:outputLabel value="&#169; 2015 &#160;"> 
+                    <a href="http://IllinoisState.edu">Illinois State University</a>, 
+                    <a href="http://maps.illinoisstate.edu">Normal, IL</a> <br />
+                    <a href="aboutUs.xhtml?faces-redirect=true">About Us</a> </h:outputLabel>
+            </p> 
+        </div>
+        <!--footer end--> 
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="resources/js/bootstrap.min.js"></script>
+    </h:body>
+</html>
+
